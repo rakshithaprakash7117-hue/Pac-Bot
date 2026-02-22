@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Bot Detector</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-wrapper">
+        <div class="hud">
+            <div class="score">SCORE: <span id="scoreVal">0</span></div>
+            <div class="title">PAC-BOT DETECTOR</div>
+            <div class="status" id="statusVal">READY</div>
+        </div>
+        <div class="canvas-container">
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+            <div id="overlay" class="overlay hidden">
+                <h1 id="overlayTitle">GAME OVER</h1>
+                <p id="overlayMessage">The Ghost Caught You!</p>
+                <button id="restartBtn">RESTART</button>
+            </div>
+            <div id="instructions" class="overlay">
+                <h1>DRAG TO MOVE</h1>
+                <p>Drag the yellow hero through the maze to the green exit.</p>
+                <button id="startBtn">START</button>
+            </div>
+        </div>
+        <div class="debug-panel hidden" id="debugParams">
+            <p>X-Var: <span id="debugX">0.0</span></p>
+            <p>Y-Var: <span id="debugY">0.0</span></p>
+            <p>Is Bot: <span id="debugBot">FALSE</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
